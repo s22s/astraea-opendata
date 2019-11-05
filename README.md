@@ -6,6 +6,8 @@ The MODIS instrument is operating on both the Terra and Aqua spacecraft, in orbi
 
 Learn more about MODIS data on [NASA’s MODIS site](https://modis.gsfc.nasa.gov/).
 
+See the [Registry of Open Data on AWS](https://registry.opendata.aws/modis-astraea/) entry for this data set.
+
 ## Accessing MODIS on AWS
 
 Each file is its own object in the `astraea-opendata` Amazon S3 bucket. An object key will look like the following:
