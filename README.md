@@ -24,11 +24,13 @@ where:
     date = 2011360 - year and three-digit day of year representation
     DATA - individual object (e.g., granule, metadata or thumbnail)
 
-If you use the AWS Command Line Interface, you can list all available files, download an individual granule, or read the metadata file in the commands below.
+If you use the AWS Command Line Interface, you can list all available files, download an individual granule, or read the metadata file in the commands below.  You must use `--requester-payer requester` to indicate you realize your AWS account will be charged. 
 
-	aws s3 ls astraea-opendata
+	aws s3 ls astraea-opendata --request-payer requester
+	
+	aws s3 ls s3://astraea-opendata/MCD43A4.006/21/11/2017200/ --request-payer requester --human-readable --summarize
 
-	aws s3 cp s3://astraea-opendata/MCD43A4.006/21/11/2017006/MCD43A4.A2017006.h21v11.006.2017018074804_B01.TIF MCD43A4.A2017006.h21v11.006.2017018074804_B01.TIF
+	aws s3 cp s3://astraea-opendata/MCD43A4.006/21/11/2017006/MCD43A4.A2017006.h21v11.006.2017018074804_B01.TIF MCD43A4.A2017006.h21v11.006.2017018074804_B01.TIF --request-payer requester
 
 	aws s3 cp s3://astraea-opendata/MCD43A4.006/21/11/2017006/MCD43A4.A2017006.h21v11.006.2017018074804_meta.json -
 
@@ -47,9 +49,9 @@ The MCD43A4 provides the 500 meter reflectance data of the MODIS “land” band
 The MOD11A1 & MYD11A1 version 6 products provide ... 
 
 
-	aws s3 ls astraea-opendata/MOD11A1.006/ 
+	aws s3 ls astraea-opendata/MOD11A1.006/ --request-payer requester
 
-	aws s3 ls astraea-opendata/MYD11A1.006/
+	aws s3 ls astraea-opendata/MYD11A1.006/ --request-payer requester
 
 ## MOD13A1 & MYD13A1, version 6
 
